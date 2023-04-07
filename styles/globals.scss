@@ -143,8 +143,8 @@ header {
         z-index: 3;
         cursor: pointer;
 
-        &.active {
-          color: black;
+        &:hover {
+          color: white;
         }
       }
 

@@ -26,7 +26,7 @@ const HeaderLink = ({ slug, title, isAlbum = true }) => {
         <motion.div layoutId="selector" className="selector"></motion.div>
       )}
       <div className="white-bg"></div>
-      <div className="text">{TITLE},</div>
+      <div className="text">{TITLE}</div>
     </Link>
   );
 };

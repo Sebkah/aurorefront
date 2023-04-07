@@ -29,11 +29,11 @@ const Header = ({ slugs }) => {
               </>
             );
           })}
-          <HeaderLink
+          {/* <HeaderLink
             title="contact"
             slug={{ current: 'contact' }}
             isAlbum={false}
-          ></HeaderLink>
+          ></HeaderLink> */}
         </div>
       )}
     </header>
