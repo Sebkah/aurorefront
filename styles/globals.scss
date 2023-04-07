@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'NeueBit-Bold';
+  src: url('/fonts/NeueBit-Bold.woff2');
+}
+@font-face {
+  font-family: 'NeueBit-Regular';
+  src: url('/fonts/NeueBit-Regular.woff2');
+}
+@font-face {
+  font-family: 'NH-Bold';
+  src: url('/fonts/NHaasGroteskDS.woff2');
+}
+@font-face {
+  font-family: 'NH-Thin';
+  src: url('/fonts/NHaasGroteskTX.woff2');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: NH-Bold;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.about-container {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  .about {
+    text-align: justify;
+    width: 300px;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  /* display: grid; */
+  /*   grid-template-rows: min-content 1fr; */
+  /* background-color: red; */
+}
+
+.page-container {
+  height: 100%;
+  width: 100%;
+}
+
+.album-container {
+  width: 100%;
+  height: 100%;
+
+  .album-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  top: 0;
+  /* left: 0; */
+  z-index: 2;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-between;
+  /*   border-bottom: 3px solid black; */
+
+  .inter {
+    padding: 0 10px;
+  }
+
+  .album-t {
+    padding-right: 40px;
+  }
+  /*  background-color: white; */
+
+  a {
+    position: relative;
+
+    .text {
+      position: relative;
+      /*   display: inline; */
+      padding: 0 10px;
+      color: transparent;
+      color: black;
+      /*   -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black; */
+
+      z-index: 3;
+      cursor: pointer;
+
+      &.active {
+        color: black;
+      }
+    }
+
+    .selector {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      /*  background-color: black; */
+      /*  border: 3px solid black;
+      border-top: 0; */
+      /*  border-bottom: 0px; */
+      border-bottom: 3px solid black;
+
+      z-index: 2;
+    }
+  }
+
+  .albums {
+    display: flex;
+    position: relative;
+
+    a {
+      position: relative;
+      z-index: 0;
+      .text {
+        position: relative;
+        /*   display: inline; */
+        padding: 0 10px;
+        color: transparent;
+        color: black;
+        /*   -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black; */
+
+        z-index: 3;
+        cursor: pointer;
+
+        &.active {
+          color: black;
+        }
+      }
+
+      .selector {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        /*  background-color: black; */
+        border: 3px solid black;
+        border-top: 0;
+        border-bottom: 0;
+        /* 
+        border-bottom: 3px solid black; */
+        margin-left: 2%;
+
+        z-index: 2;
+      }
+
+      /* .white-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1;
+      } */
+    }
+  }
+}
+
+body {
+}
+
+.project-entry {
+  position: relative;
+  display: grid;
+  /*   grid-template-columns: 1fr 0.6fr; */
+  grid-template-rows: repeat(auto-fill, 450px);
+  cursor: pointer;
+
+  &:hover {
+    .project-image {
+      transform: translateX(-10px);
+    }
+    .big-arrow {
+      position: absolute;
+      font-size: 10rem;
+      z-index: 10;
+
+      transform: translate(-100%, 50%);
+      &.left {
+        transform: translate(100%, 50%);
+      }
+    }
+  }
+  /*   overflow: hidden; */
+
+  .big-arrow {
+    position: absolute;
+    font-size: 10rem;
+    z-index: 10;
+
+    transform: translate(0, 50%);
+    transition: 0.5s;
+  }
+
+  .project-info {
+    /*  place-self: center; */
+    /*  margin-left: 5vw; */
+    /* align-self: center; */
+    margin-top: 5vw;
+    font-size: 3rem;
+    height: min-content;
+    /*     padding: 50px;
+    border: white 2px solid; */
+    .project-title {
+      color: white;
+    }
+    .project-periode {
+      background-color: white;
+      padding: 0 15px;
+    }
+  }
+
+  .project-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
